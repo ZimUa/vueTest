@@ -1,28 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Forms :fields="fields1"></Forms>
+    <Forms :fields="fields2"></Forms>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Forms from './components/Forms.vue'
 
 export default {
   name: 'app',
+  data(){
+    return{
+      fields1:['text', 'radio', 'checkbox', 'submit'],
+      fields2: ['text', 'text', 'checkbox', 'submit'],
+      fields3: ['text', 'text', 'checkbox', 'submit'],
+      fields4: ['text', 'text', 'checkbox', 'submit']
+
+    }
+  },
   components: {
-    HelloWorld
+    Forms
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
+
 </style>
